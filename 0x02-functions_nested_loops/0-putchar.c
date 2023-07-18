@@ -1,7 +1,8 @@
 #include <stdio.h> 
 #include "main.h"
 
-/** * function_name - Print a string
+/**
+  *main - Print a string
   *  
   *Description: this function for print the string "_putchar"
   * Return: 0 value
