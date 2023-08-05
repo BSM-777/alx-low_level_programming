@@ -6,7 +6,7 @@
  * main - print the addition of positive numbers
  * @argc: number of arguments
  * @argv: array of arguments
- * Return: 0 if argc = 0, Error if any argument is not a positive integer, otherwise print sum
+ * Return: 0 if argc=0, Error if arg is not a positive int, otherwise print sum
  */
 int main(int argc, char *argv[])
 {
@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	while (--argc)
 	{
 		for (a = argv[argc]; *a; a++)
-			if (*a < '0' || *a >'9')
+			if (*a < '0' || *a > '9')
 				return (printf("Error\n"), 1);
 		sum += atoi(argv[argc]);
 	}
