@@ -1,31 +1,29 @@
-#include "lists.h"
+#include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
+#include "lists.h"
 
 /**
- * print_list - prints list.
- * @h: param list
- * Return: struct
+ * print_list - check the code for Holberton School students.
+ * @h: name of the list
+ * Return: the number of nodes.
  */
-
 size_t print_list(const list_t *h)
 {
-	size_t l_node = 0;
+	int count = 0;
 
-	while (h != NULL)
+	while (h)
 	{
-		switch (h->str == NULL)
+		if (h->str == NULL)
 		{
-			case 1:
-				printf("[%d] %s\n", 0, "(nil)");
-				break;
-			case 0:
-				printf("[%d] %s\n", h->len, h->str);
-				break;
+			printf("[0] (nil)\n");
 		}
-
+		else
+		{
+		printf("[%d] %s\n", h->len, h->str);
+		}
+		count++;
 		h = h->next;
-		l_node++;
 	}
-
-	return (l_node);
+	return (count);
 }
